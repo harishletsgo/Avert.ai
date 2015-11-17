@@ -1,0 +1,67 @@
+curl -X POST https://tartan.plaid.com/connect \
+  -d client_id=564b9b8ae7dbd3891f08e5c7 \
+  -d secret=1dfec358a688c56c1b881fff5cf4da \
+  -d username=user1 \
+  -d password=saminaminayeye1 \
+  -d type=chase
+
+http code 200
+{
+  "accounts": [
+    {
+      "_id": "YzzrzBrO9OSzo6BXwAvVuL5dmMKMqkhOoEqeo",
+      "_item": "aWWVW4VqGqIdaP495QyOSVLN1nzjLwhXaPDJJ",
+      "_user": "bkkVkMVwQwfYmBMy9jzqHQob9O1KwpFaEyLOE",
+      "balance": {
+        "available": 9930,
+        "current": 2275.58
+      },
+      "institution_type": "Chase",
+      "meta": {
+        "limit": 12500,
+        "number": "3002",
+        "name": "Chase Credit Card"
+      },
+      "type": "credit"
+    },
+...],
+  "transactions": [
+    {
+      "_account": "YzzrzBrO9OSzo6BXwAvVuL5dmMKMqkhOoEqeo",
+      "_id": "600r0LrVvViXjq96lBpdtyOWboBvzmsaZoeaVz",
+      "amount": 12.74,
+      "date": "2014-05-12",
+      "name": "Golden Crepes",
+      "meta": {
+        "location": {
+          "coordinates": {
+            "lat": 40.740352,
+            "lon": -74.001761
+          },
+          "state": "NY",
+          "city": "New York",
+          "address": "262 W 15th St"
+        }
+      },
+      "pending": false,
+      "score": {
+        "master": 1,
+        "detail": {
+          "address": 1,
+          "city": 1,
+          "name": 1,
+          "state": 1
+        }
+      },
+      "type": {
+        "primary": "place"
+      },
+      "category": [
+        "Food and Drink",
+        "Restaurants"
+      ],
+      "category_id": "13005000"
+    },
+...],
+  "access_token": "test"
+}
